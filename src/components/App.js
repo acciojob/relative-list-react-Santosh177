@@ -1,14 +1,17 @@
 import React from 'react'
 
+
 const App = () => {
+    const arr=["A","B","C"]
   return (
-    <div id="main">
-              <ol key="relativeList">
-               <li key="relativeListItem1">Santosh</li>
-                <li key="relativeListItem2">Rahul</li>
-              </ol>
+    <div>
+        <ol id='relativeList'>
+        {arr.map((el,i)=>
+            <li id={`relativeListItem${i+1}`} key={`relativeListItem${i+1}`}>{el}</li>
+        )}
+        </ol>
     </div>
   )
 }
 
-export default App
+export default App;
